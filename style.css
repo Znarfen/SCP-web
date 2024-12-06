@@ -1,0 +1,64 @@
+:root {
+    --color1: rgb(39, 36, 28);
+    --color2: rgb(22, 174, 22);
+}
+
+body {
+    margin: 0;
+    background-color: var(--color1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color2);
+}
+
+h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+nav {
+    height: 200px;
+    border-bottom: 2px;
+    border-style: none none dashed;
+    border-color: var(--color2);
+}
+
+.icon {
+    float: left;
+    height: 200px;
+    width: 200px;
+}
+
+.icon img {
+    height: 100%;
+    width: 100%;
+}
+
+.nav-content {
+    text-align: center;
+}
+
+.scp-container {
+    margin: 50px;
+    width: calc(100% - 100px);
+    border: 2px;
+    border-style: dashed;
+    border-color: var(--color2);
+}
+
+.scp-container img {
+    height: 150px;
+    margin: 50px;
+}
+
+.scp-container h2 {
+    border: 2px;
+    border-style: none none dashed;
+    border-color: var(--color2);
+}
