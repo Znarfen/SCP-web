@@ -1,49 +1,41 @@
 
-// SECURE CONTAIN PROTECT
-
 // Get scp api
-fetch("https://scp-data.tedivm.com/data/scp/items/index.json")
+fetch("https://scp-data.tedivm.com/data/scp/goi/content_goi.json")
     .then(scpRequest => scpRequest.json())
     .then((scpRequest) => {
         
-        let allSCP = Object.values(scpRequest)
+        let allContent = Object.values(scpRequest)
 
         let id = 0;
 
-        allSCP.forEach(content => {
-            id++;
-            if(id > 10) {
-                return; // Use 'return' instead of 'break' to exit the forEach loop
-            }
+        allContent.forEach(content => {
             loadContent(content)
         });
 
     });
 
 // Load a selected (SCP) item
-function loadContent(newSCP) {
-    console.log(newSCP);
-    console.log(newSCP.scp);
-    console.log(newSCP.images[0]);
-    console.log(newSCP.url);
+function loadContent(newItem) {
+    //console.log(newItem);
 
     // Create a div to contain information
     let container = document.createElement("div");
     container.className = "scp-container";
-    container.id = newSCP.scp;
+    container.id = newItem.link;
+    container.onclick = () => {
+        window.location = "view.html#" + newItem.link;
+    };
 
     // Create title
     let title = document.createElement("h2");
-    title.textContent = newSCP.scp;
+    title.textContent = "# " + newItem.title;
     container.appendChild(title);
 
-    // Create image / tumnail
-    newSCP.images.forEach(images => {
-        let picture = document.createElement("img");
-        picture.setAttribute("src", images);
-        container.appendChild(picture);
-    });
+    // Create description
+    let description = document.createElement("p");
+    description.textContent = "> " + newItem.title;
+    container.appendChild(description);
 
     // Append container to body
-    document.getElementById("content").appendChild(container);    
+    document.getElementById("content").appendChild(container);
 }

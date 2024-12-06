@@ -1,6 +1,7 @@
 :root {
-    --color1: rgb(39, 36, 28);
+    --color1: rgb(32, 27, 17);
     --color2: rgb(22, 174, 22);
+    --color3: rgb(33, 73, 193);
 }
 
 body {
@@ -9,21 +10,20 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--color2);
+    font-size: 30px;
 }
 
-h1 {
-    font-size: 50px;
-    margin: 0;
+p {
+    font-size: 17px;
 }
 
-h2 {
-    font-size: 40px;
-    margin: 0;
+img {
+    max-width: 100%;
 }
 
 nav {
-    height: 200px;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.25);
     border-bottom: 2px;
     border-style: none none dashed;
     border-color: var(--color2);
@@ -31,8 +31,8 @@ nav {
 
 .icon {
     float: left;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
 }
 
 .icon img {
@@ -42,6 +42,7 @@ nav {
 
 .nav-content {
     text-align: center;
+    color: var(--color2);
 }
 
 .scp-container {
@@ -50,15 +51,32 @@ nav {
     border: 2px;
     border-style: dashed;
     border-color: var(--color2);
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 .scp-container img {
     height: 150px;
-    margin: 50px;
+    margin: 10px;
 }
 
 .scp-container h2 {
+    padding-left: 20px;
+    padding-right: 20px;
     border: 2px;
     border-style: none none dashed;
     border-color: var(--color2);
+    color: var(--color2);
+}
+
+.scp-container p {
+    color: var(--color3);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.page-content {
+    width: calc(100% - 120px);
+    margin: 60px;
+    padding: 20px;
+    background-color: beige;
 }
