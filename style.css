@@ -1,12 +1,15 @@
 :root {
-    --color1: rgb(32, 27, 17);
+    --background-color-1: rgb(32, 31, 16);
+    --background-color-2: rgb(21, 21, 11);
+
+    --color1: rgb(205, 197, 40);
     --color2: rgb(22, 174, 22);
-    --color3: rgb(33, 73, 193);
+    --color3: rgb(0, 115, 255);
 }
 
 body {
     margin: 0;
-    background-color: var(--color1);
+    background-color: var(--background-color-1);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,17 +25,46 @@ img {
 }
 
 nav {
+    background-color: var(--background-color-2);
+    border: 2px;
+    border-style: none none dashed none;
+    border-color: var(--color2);
+}
+
+.nav-content {
+    text-align: center;
+    color: var(--color2);
     height: 150px;
-    background-color: rgba(0, 0, 0, 0.25);
-    border-bottom: 2px;
-    border-style: none none dashed;
+}
+
+.nav-navigation {
+    width: 100%;
+    border: 2px;
+    background-color: var(--background-color-2);
+    border-style: dashed none none  none;
+    border-color: var(--color2);
+    top: 0;
+}
+
+.nav-navigation p {
+    margin: 0;
+}
+
+.nav-navigation a {
+    color: var(--color2);
+    font-size: 30px;
+    text-decoration: none;
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px;
+    border-style: none dashed none none;
     border-color: var(--color2);
 }
 
 .icon {
     float: left;
     height: 150px;
-    width: 150px;
 }
 
 .icon img {
@@ -40,18 +72,16 @@ nav {
     width: 100%;
 }
 
-.nav-content {
-    text-align: center;
-    color: var(--color2);
-}
-
 .scp-container {
     margin: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     width: calc(100% - 100px);
     border: 2px;
+    float: right;
     border-style: dashed;
     border-color: var(--color2);
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: var(--background-color-2);
 }
 
 .scp-container img {
@@ -75,8 +105,32 @@ nav {
 }
 
 .page-content {
-    width: calc(100% - 120px);
-    margin: 60px;
-    padding: 20px;
+    width: calc(100% - 100px);
+    margin: 50px;
     background-color: beige;
+}
+
+.page-content p {
+    margin: 20px;
+}
+
+.content-bar {
+    margin: 50px;
+    width: calc(100% - 100px);
+    border: 2px;
+    border-style: dashed;
+    border-color: var(--color2);
+    background-color: var(--background-color-2);
+}
+
+.content-bar h2 {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: var(--color2);
+}
+
+.content-bar p {
+    color: var(--color3);
+    padding-left: 20px;
+    padding-right: 20px;
 }

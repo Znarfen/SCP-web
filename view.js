@@ -23,5 +23,6 @@ fetch("https://scp-data.tedivm.com/data/scp/goi/content_goi.json")
         console.log(content.raw_content);
 
         document.getElementById("content").innerHTML = content.raw_content;
+        document.getElementById("official-web").href = content.url;
 
     });
